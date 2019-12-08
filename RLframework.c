@@ -1295,7 +1295,7 @@ return 1;
 
 void PrintBatteryEvoVSTimeDataFile(double alpha, double beta){
 FILE *BatteryEvoVSTimefiledata;
-BatteryEvoVSTimefiledata=fopen("C:\\Codeblocks\\FrameWorkAlgos\\runtimeresults\\BatteryEvoVSTimefiledata.txt","a");
+BatteryEvoVSTimefiledata=fopen("C:\\yourfolder\\BatteryEvoVSTimefiledata.txt","a");
 
     for(int epoch=0;epoch<epochs;epoch=epoch+1)
         fprintf(BatteryEvoVSTimefiledata,"%lf ",batteryevoovertime[epoch]);
@@ -1309,7 +1309,7 @@ fclose(BatteryEvoVSTimefiledata);
 
 void PrintRewardEvoVSTimeDataFile(double alpha, double beta){
 FILE *RewardEvoVSTimefiledata;
-RewardEvoVSTimefiledata=fopen("C:\\Codeblocks\\FrameWorkAlgos\\runtimeresults\\RewardEvoVSTimefiledata.txt","a");
+RewardEvoVSTimefiledata=fopen("C:\\yourfolder\\RewardEvoVSTimefiledata.txt","a");
 
     for(int epoch=0;epoch<epochs;epoch=epoch+1)
         fprintf(RewardEvoVSTimefiledata,"%lf ",rewardevoovertime[epoch]);
@@ -1321,22 +1321,4 @@ RewardEvoVSTimefiledata=fopen("C:\\Codeblocks\\FrameWorkAlgos\\runtimeresults\\R
 fclose(RewardEvoVSTimefiledata);
 }
 
-void readHarvesterAndPacketdata(){
-FILE *HarvesterAndPacketfiledata;
-HarvesterAndPacketfiledata=fopen("C:\\Codeblocks\\FrameWorkAlgos\\HarvesterAndPacketfiledatasigmadn1sigmahn1.txt","r");
 
-for (int muhnaux=minenergy;muhnaux<=maxenergy;muhnaux++){
-    for (int iepoch=0;iepoch<=epochs;iepoch++){
-        fscanf(HarvesterAndPacketfiledata,"%d",&hnruntime[muhnaux-minenergy][iepoch]);
-        printf("hnruntime[%d][%d]=%d\n",muhnaux-minenergy,iepoch,hnruntime[muhnaux-minenergy][iepoch]);
-    }
-}
-
-for (int muhnaux=minenergy;muhnaux<=maxenergy;muhnaux++){
-    for (int iepoch=0;iepoch<=epochs;iepoch++){
-        fscanf(HarvesterAndPacketfiledata,"%d",&dnruntime[muhnaux-minenergy][iepoch]);
-        printf("dnruntime[%d][%d]=%d\n",muhnaux-minenergy,iepoch,dnruntime[muhnaux-minenergy][iepoch]);
-    }
-}
-
-}
