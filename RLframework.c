@@ -22,11 +22,6 @@ double* rewardVector;
 double **parameterVector; //theta - policy parameter vector
 double **EstimatedQvalues;
 double *derivativeQ;
-double *derivativeProb;
-double *ANNWeightsold;
-double *ANNWeightsnew;
-double *probWeightsold;
-double *probWeightsnew;
 double *preferences;
 double *preferencesmapping;
 double **EstimatedProbabilities;
@@ -1295,7 +1290,7 @@ return 1;
 
 void PrintBatteryEvoVSTimeDataFile(double alpha, double beta){
 FILE *BatteryEvoVSTimefiledata;
-BatteryEvoVSTimefiledata=fopen("C:\\yourfolder\\BatteryEvoVSTimefiledata.txt","a");
+BatteryEvoVSTimefiledata=fopen("BatteryEvoVSTimefiledata.txt","a");
 
     for(int epoch=0;epoch<epochs;epoch=epoch+1)
         fprintf(BatteryEvoVSTimefiledata,"%lf ",batteryevoovertime[epoch]);
@@ -1309,7 +1304,7 @@ fclose(BatteryEvoVSTimefiledata);
 
 void PrintRewardEvoVSTimeDataFile(double alpha, double beta){
 FILE *RewardEvoVSTimefiledata;
-RewardEvoVSTimefiledata=fopen("C:\\yourfolder\\RewardEvoVSTimefiledata.txt","a");
+RewardEvoVSTimefiledata=fopen("RewardEvoVSTimefiledata.txt","a");
 
     for(int epoch=0;epoch<epochs;epoch=epoch+1)
         fprintf(RewardEvoVSTimefiledata,"%lf ",rewardevoovertime[epoch]);
@@ -1320,5 +1315,3 @@ RewardEvoVSTimefiledata=fopen("C:\\yourfolder\\RewardEvoVSTimefiledata.txt","a")
 
 fclose(RewardEvoVSTimefiledata);
 }
-
-
