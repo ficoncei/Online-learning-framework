@@ -1,12 +1,13 @@
-# Online-learning-framework
+# Reinforcement Learning framework for security optimisation
 
-# What Online-learning-framework?
-Online-learning-framework is a framework in C++ that addresses the iot survival problem with the implementation of several RL algorithms in the same framework, for fair comparison. (see systemmodel.png and iot-survival repository).
+# What is RL framework for security optimisation?
+This framework coded in C++ addresses an IoT device survival problem. An IoT device is underfed by an Energy Harvester and is obliged to make security decisions to stay alive and still try to maximise packet security (see systemmodel.png).
 
 # Machine Learning for IoT device survival
-Several RL algorithms are coded in C++ in this framework:
-- Q-learning - an off policy RL method that explores the action value function
-- Double Q-learning - a less biased version of Q-learning that requires more memory and tends to learn faster
-- SARSA - an on-policy learning method
-- Expected SARSA - an off-policy variant of SARSA with an update rule that accounts for the expected value of the action a_{n+1}
-- n step SARSA - an on-policy learning method that makes updates to Q-tables every n time slots
+The RL algorithms coded in C++ in this framework are:
+- Double Q-learning - a less biased version of Q-learning that requires more memory due to the use of two Q-tables instead of one but that tends to learn faster
+- Expected SARSA - an off-policy algorithm, variant of SARSA that has an update rule that accounts for the expected value of the action a_{n+1}, i.e., considers both the probability of selecting an action and the action value of that same action.
+
+# How to play with the framework
+The framework has all the code bulked in one .c file. It has several parameters related to the system model that can be tuned. Double Q-learning or Expected SARSA can be chosen as the learning algorithm. Learning time can be tuned and the framework outputs files where the learned policies, the current Q-tables and the number of visits to each state-action pair are displayed for convergence control.  
+
