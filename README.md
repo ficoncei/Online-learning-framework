@@ -9,5 +9,5 @@ The RL algorithms coded in C++ in this framework are:
 - Expected SARSA - an off-policy algorithm, variant of SARSA that has an update rule that accounts for the expected value of the action a_{n+1}, i.e., considers both the probability of selecting an action and the action value of that same action.
 
 # How to play with the framework
-The framework has all the code bulked in one .c file. It has several parameters related to the system model that can be tuned. Double Q-learning or Expected SARSA can be chosen as the learning algorithm. Learning time can be tuned and the framework outputs files where the learned policies, the current Q-tables and the number of visits to each state-action pair are displayed for convergence control.  
+The framework has all the code bulked in one .c file. It has several parameters related to the system model that can be tuned. Double Q-learning or Expected SARSA can be chosen as the learning algorithm. Learning time can be tuned and the framework outputs files where the learned policies, the current Q-tables and the number of visits to each state-action pair are displayed for convergence control. All policies learned can be simulated and consequently, any relevant data to the problem can be retrieved.
 
